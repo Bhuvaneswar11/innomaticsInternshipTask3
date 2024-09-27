@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-areas: 
+      "header"
+      "content"
+      "sign-up"
+      "feature1"
+      "feature2"
+      "feature3";
+    gap: 1em;
+    padding: 1em;
+  }
+  
+  header {
+    grid-area: header;
+    background-color: #87CEEB;
+    text-align: center;
+    padding: 1em;
+  }
+  
+  .content {
+    grid-area: content;
+    background-color: #D3D3D3;
+    padding: 2em;
+  }
+  
+  .sign-up {
+    grid-area: sign-up;
+    background-color: #FFA07A;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  .features {
+    padding: 1em;
+    text-align: center;
+  }
+  
+  .feature1 {
+    grid-area: feature1;
+    background-color: #FFD700;
+  }
+  
+  .feature2 {
+    grid-area: feature2;
+    background-color: #FF69B4;
+  }
+  
+  .feature3 {
+    grid-area: feature3;
+    background-color: #DDA0DD;
+  }
+  
+  @media (min-width: 768px) {
+    body {
+      grid-template-areas: 
+        "header header"
+        "content content"
+        "sign-up feature1"
+        "feature2 feature3";
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    body {
+      grid-template-areas: 
+        "header header header"
+        "feature1 feature2 feature3"
+        "sign-up sign-up sign-up"
+        "content content content";
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
